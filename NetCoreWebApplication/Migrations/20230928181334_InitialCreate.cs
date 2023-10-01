@@ -83,8 +83,7 @@ namespace NetCoreWebApplication.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    SurName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SurName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -122,8 +121,8 @@ namespace NetCoreWebApplication.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "CreateDate", "Email", "IsActive", "Name", "Password", "Phone", "SurName", "Surname", "UserName" },
-                values: new object[] { 1, new DateTime(2023, 9, 6, 21, 33, 22, 971, DateTimeKind.Local).AddTicks(4786), "admin@NetCoreWebApplication.net", true, "Admin", "123456", "1234567890", null, "1234567890", "Admin" });
+                columns: new[] { "Id", "CreateDate", "Email", "IsActive", "Name", "Password", "Phone", "SurName", "UserName" },
+                values: new object[] { 1, new DateTime(2023, 9, 28, 21, 13, 34, 211, DateTimeKind.Local).AddTicks(2547), "admin@NetCoreWebApplication.net", true, "Admin", "123456", "1234567890", "1234567890", "Admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_CategoryId",

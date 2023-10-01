@@ -12,7 +12,7 @@ using NetCoreWebApplication.Data;
 namespace NetCoreWebApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20230906183323_InitialCreate")]
+    [Migration("20230928181334_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -221,9 +221,6 @@ namespace NetCoreWebApplication.Migrations
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("SurName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -241,13 +238,13 @@ namespace NetCoreWebApplication.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 9, 6, 21, 33, 22, 971, DateTimeKind.Local).AddTicks(4786),
+                            CreateDate = new DateTime(2023, 9, 28, 21, 13, 34, 211, DateTimeKind.Local).AddTicks(2547),
                             Email = "admin@NetCoreWebApplication.net",
                             IsActive = true,
                             Name = "Admin",
                             Password = "123456",
                             Phone = "1234567890",
-                            Surname = "1234567890",
+                            SurName = "1234567890",
                             UserName = "Admin"
                         });
                 });
